@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Послуги</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            position: relative;
+           
+        }
+        body::before{
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('laptop-wooden-table-hands-man-working-computer.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
+        .container {
+            background-color: #4CAF50; /* Додано крапку з комою */
+            padding: 20px;
+            border-radius: 8px; /* Використовуйте border-radius замість border: radius */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .login-btn, .register-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .login-btn {
+            background-color: #555;
+            color: white;
+        }
+
+        .register-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .login-btn:hover, .register-btn:hover {
+            opacity: 0.8;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            padding: 20px;
+            margin: 80px auto 0; /* Додано верхній відступ для навігації */
+        }
+
+        .service {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(78, 22, 22, 0.1);
+            flex: 1 1 300px;
+            margin: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service:hover {
+            transform: scale(1.05);
+        }
+
+        .service h3 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .service p {
+            font-size: 1.1em;
+            color: #666;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">CodeWave</div>
+        <ul class="nav-links">
+            <li><a href="./index.html">Головна</a></li>
+            <li><a href="./inform.html">Про нас</a></li>
+            <li><a href="services.html">Послуги</a></li>
+            <li><a href="./contacts.html">Контакти</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="./login.html" class="login-btn">Увійти</a>
+            <a href="./registration.html" class="register-btn">Реєстрація</a>
+        </div>
+    </nav>
+
+    <div class="services-container">
+        <div class="service">
+            <h3>Основи програмування</h3>
+            <p>Досліджуйте базові концепції програмування на мовах Python і JavaScript. Ви створите свої перші програми та закладете міцний фундамент для подальшого навчання.</p>
+        </div>
+        <div class="service">
+            <h3>Веб-розробка</h3>
+            <p>Навчіться створювати сучасні веб-сайти з використанням HTML, CSS та JavaScript. Заняття охоплюють фронтенд та бекенд-розробку за допомогою фреймворків, таких як React і Node.js.</p>
+        </div>
+        <div class="service">
+            <h3>Розробка мобільних додатків</h3>
+            <p>Створюйте додатки для iOS та Android з використанням Flutter і React Native. Досліджуйте принципи UX/UI дизайну та реалізуйте свій власний мобільний проект</p>
+        </div>
+        <div class="service">
+            <h3>Курси програмування для дітей та підлітків</h3>
+            <p>Навчання програмуванню дітей від 7 років за ігровими сценаріямиОпановуйте навички роботи з даними за допомого.</p>
+        </div>
+    </div>
+
+</body>
+</html>

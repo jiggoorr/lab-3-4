@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн школа програмування CodeWave</title>
+    <link rel="stylesheet" href="paneli.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            color: #333;
+            scroll-behavior: smooth;     
+        }
+        .hero-section {
+            background-image: url('background-image.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-content h1 {
+            font-size: 3em;
+            font-weight: bold;
+        }
+        .section {
+            padding: 40px 20px;
+            background: linear-gradient(45deg, #f4f4f4, #e0e0e0);
+            text-align: center;
+        }
+        #scrollToTop {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 10px 15px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">CodeWave</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="#about">Про нас</a></li>
+            <li><a href="#services">Послуги</a></li>
+            <li><a href="./contacts.html">Контакти</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Про Онлайн Школу Програмування CodeWave</h1>
+            <p>Навчання програмуванню для дітей і підлітків від 7 років та дорослих.</p>
+        </div>
+    </section>
+
+    <section id="about" class="section" style="height: 1500px;">
+        <h2>Про нас</h2>
+        <p><strong>CodeWave</strong> — це онлайн школа програмування, яка допомагає дітям і підліткам опанувати основи програмування і розвивати свої технічні навички.</p>
+        <p>Наша місія — зробити навчання програмуванню доступним і цікавим для всіх вікових груп.</p>
+    </section>
+
+    <section id="services" class="section">
+        <h2>Наші послуги</h2>
+        <ul>
+            <li>Курси програмування для дітей (Python, Scratch)</li>
+            <li>Онлайн-курси для дорослих (JavaScript, HTML/CSS)</li>
+            <li>Індивідуальні консультації та репетиторство</li>
+        </ul>
+    </section>
+
+    <section id="testimonials" class="section">
+        <h2>Відгуки наших учнів</h2>
+        <p>“CodeWave — це найкраще місце для вивчення програмування!” - Олена, 12 років</p>
+        <p>“Я навчився багато нового, і тепер можу створити свій власний вебсайт!” - Іван, 15 років</p>
+    </section>
+
+    <section id="contacts" class="section">
+        <h2>Контакти</h2>
+        <p>Електронна пошта: info@codewave.com</p>
+        <p>Телефон: +38 (044) 123-45-67</p>
+    </section>
+
+    <button id="scrollToTop" onclick="scrollToTop()">⬆</button>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        window.onscroll = function () {
+            const scrollButton = document.getElementById("scrollToTop");
+            if (window.scrollY > 300) {
+                scrollButton.style.opacity = 1;
+            } else {
+                scrollButton.style.opacity = 0;
+            }
+        };
+    </script>
+</body>
+</html>

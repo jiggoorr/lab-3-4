@@ -1,0 +1,171 @@
+:root {
+    --white-color: white;
+    --interesting-color: #c76969;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.logo {
+    color: var(--white-color);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn, .register-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-btn {
+    background-color: #555;
+    color: white;
+}
+
+.register-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.login-btn:hover, .register-btn:hover {
+    opacity: 0.8;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('laptop-wooden-table-hands-man-working-computer.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+header {
+    text-align: center;
+    background-color: var(--interesting-color);
+}
+
+h1 {
+    color: #fff;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.image-container {
+    width: fit-content;
+    margin: 20px 0;
+    overflow: hidden; /* Сховати частини зображення, які виходять за межі */
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    z-index: 2;
+    opacity: 1; /* Початкова непрозорість тексту */
+    transition: opacity 0.5s ease; /* Плавний перехід при зміні непрозорості */
+}
+
+.positioned-image {
+    width: 500px;
+    height: auto;
+    opacity: 0; /* Зображення спочатку невидиме */
+    transition: opacity 0.5s ease; /* Плавний перехід при зміні непрозорості */
+}
+
+.image-container:hover .overlay {
+    opacity: 0; /* При наведенні текст ховається */
+}
+
+.image-container:hover .positioned-image {
+    opacity: 1; /* При наведенні зображення стає видимим */
+}
+
+/* Додати стиль для ефекту зрізаного кута */
+.image-container:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, transparent 32px, #1769ff 0);
+    z-index: 1; /* Зазначити, щоб цей шар був під текстом */
+}
+
+.right-image {
+    float: right;
+    margin-left: 10px;
+    margin-right: 40px;
+}
+
+.positioned-image:hover,
+.right-image:hover {
+    transform: scale(1.05);
+}
+
+.caption {
+    clear: both;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
